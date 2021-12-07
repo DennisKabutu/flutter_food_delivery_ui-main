@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_food_delivery_ui/data/data.dart';
+import 'package:flutter_food_delivery_ui/screens/cart_screen.dart';
 import 'package:flutter_food_delivery_ui/widgets/nearby_restaurants.dart';
 import 'package:flutter_food_delivery_ui/widgets/recent_orders.dart';
 
@@ -24,12 +25,12 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           TextButton(
-              onPressed: () {},
+              onPressed: () => Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => CartScreen())),
               child: Text(
                 'cart (${currentUser.cart.length})',
                 style: TextStyle(color: Colors.white, fontSize: 20.0),
-              )
-          )
+              ))
         ],
       ),
       body: ListView(

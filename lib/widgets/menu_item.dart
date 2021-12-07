@@ -79,7 +79,8 @@ class MenuItem extends StatelessWidget {
                   ),
                   onPressed: () {},
                 ),
-              ))
+              )
+          )
         ],
       ),
     );
